@@ -1,12 +1,91 @@
+<script>
+	import { createEventDispatcher, onMount } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+	let selected, next, prev;
+
+	function changeSelection(direction) {
+		if (direction === 'left') {
+			content.push(selected);
+			selected = content.shift();
+			prev = content[0];
+			next = content[content.length - 1];
+		}
+		if (direction === 'right') {
+			content.unshift(selected);
+			selected = content.pop();
+			prev = content[0];
+			next = content[content.length - 1];
+		}
+		content = content;
+		tellTitle();
+	}
+
+	function tellTitle() {
+		dispatch('title', {
+			name: selected.name
+		});
+	}
+
+	function handleKeydown(event) {
+		if (event.key === 'ArrowRight') {
+			changeSelection('right');
+		}
+		if (event.key === 'ArrowLeft') {
+			changeSelection('left');
+		}
+	}
+
+	let content = [
+		{
+			id: 1,
+			name: 'Collectively Narrated',
+			image: 'image.png'
+		},
+		{
+			id: 2,
+			name: 'Collectively Narrated',
+			image: 'image2.jpeg'
+		},
+		{
+			id: 3,
+			name: 'Collectively Narrated',
+			image: 'image3.jpg.webp'
+		}
+	];
+
+	selected = content.pop();
+	prev = content[content.length - 1];
+	next = content[0];
+
+	onMount(() => {
+		tellTitle();
+		changeSelection('left');
+	});
+</script>
+
 <div>
-	<div class="prev"><img src="image.png" alt="img" class="prev" /></div>
-	<div class="current">
-		<img src="image.png" alt="" class="current" />
+	<div
+		class="prev"
+		on:mousedown={() => {
+			changeSelection('left');
+		}}
+	>
+		<img src={prev.image} alt="img" class="prev" />
 	</div>
-	<div class="next">
-		<img src="image.png" alt="" class="next" />
+	<div class="current">
+		<img src={selected.image} alt="" class="current" />
+	</div>
+	<div
+		class="next"
+		on:mousedown={() => {
+			changeSelection('right');
+		}}
+	>
+		<img src={next.image} alt="" class="next" />
 	</div>
 </div>
+<svelte:window on:keydown={handleKeydown} />
 
 <style>
 	div {
@@ -16,7 +95,9 @@
 	}
 	img.current {
 		max-width: 100%;
+		max-height: 80%;
 		height: auto;
+		margin: auto;
 	}
 	.current {
 		grid-column: 2/2;
@@ -46,5 +127,8 @@
 	}
 	img.next {
 		max-height: 50%;
+	}
+	:hover {
+		opacity: 1;
 	}
 </style>

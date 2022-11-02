@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import '../styles.css';
 
+	export let name;
 	let date = new Date();
 	$: time = date.toLocaleTimeString();
 
@@ -14,7 +15,7 @@
 
 <div>
 	<h1 class="left">{time}</h1>
-	<h1 class="center">PROJECT TITLE</h1>
+	<h1 class="center">{name}</h1>
 	<h1 class="right">Johannes Felix Lotze</h1>
 </div>
 
