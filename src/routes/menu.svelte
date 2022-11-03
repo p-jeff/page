@@ -36,6 +36,14 @@
 		}
 	}
 
+	function handleScroll(event) {
+		if (event.deltaX > 0) {
+			changeSelection('left');
+		} else if (event.deltaX < 0) {
+			changeSelection('right');
+		}
+	}
+
 	let content = [
 		{
 			id: 1,
@@ -85,7 +93,8 @@
 		<img src={next.image} alt="" class="next" />
 	</div>
 </div>
-<svelte:window on:keydown={handleKeydown} />
+
+<svelte:window on:keydown={handleKeydown} on:mousewheel={handleScroll} />
 
 <style>
 	div {
