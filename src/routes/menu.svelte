@@ -52,13 +52,18 @@
 		},
 		{
 			id: 2,
-			name: 'Collectively Narrated',
-			image: 'image2.jpeg'
+			name: 'Am I Gaboniontum?',
+			image: 'DSC_2778.jpg'
 		},
 		{
 			id: 3,
-			name: 'Collectively Narrated',
-			image: 'image3.jpg.webp'
+			name: 'Cash from Crisis',
+			image: 'project-2.jpg'
+		},
+		{
+			id: 4,
+			name: 'KI_tchen',
+			image: 'team2_2.jpg'
 		}
 	];
 
@@ -136,6 +141,7 @@
 	}
 	img.next {
 		max-height: 50%;
+		margin-left: -100%;
 	}
 	:hover {
 		opacity: 1;
