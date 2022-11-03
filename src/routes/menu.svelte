@@ -85,6 +85,7 @@
 		}}
 	>
 		<img src={prev.image} alt="img" class="prev" />
+		<p>&lt;</p>
 	</div>
 	<div class="current">
 		<img src={selected.image} alt="" class="current" />
@@ -96,6 +97,7 @@
 		}}
 	>
 		<img src={next.image} alt="" class="next" />
+		<p>&gt;</p>
 	</div>
 </div>
 
@@ -122,26 +124,37 @@
 	}
 	.prev {
 		grid-column: 1/1;
-		display: flex;
+		display: grid;
 		align-items: center;
 		opacity: 70%;
 		height: 88vh;
 		z-index: 1;
+		text-align: center;
 	}
 	img.prev {
 		max-height: 50%;
+		grid-area: 1/1;
 	}
 	.next {
 		grid-column: 3/3;
-		display: flex;
+		display: grid;
 		align-items: center;
 		opacity: 70%;
 		height: 88vh;
 		z-index: 1;
+		text-align: center;
 	}
 	img.next {
 		max-height: 50%;
 		margin-left: -100%;
+		grid-area: 1/1;
+	}
+	p {
+		grid-area: 1/1;
+		z-index: 2;
+		font-size: xx-large;
+		color: #fefeef;
+		grid-area: 1/1;
 	}
 	:hover {
 		opacity: 1;

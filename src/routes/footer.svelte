@@ -15,7 +15,7 @@
 
 <div>
 	<h1 class="left">{time}</h1>
-	<h1 class="center"><a>&lt; &emsp;</a> {name} <a>&emsp; &gt;</a></h1>
+	<h1 class="center">{name}</h1>
 	<h1 class="right">Johannes Felix Lotze</h1>
 </div>
 
