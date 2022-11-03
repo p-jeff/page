@@ -2,6 +2,7 @@
 	import { DecrementWrapStencilOp } from 'three';
 	import Footer from './footer.svelte';
 	import Menu from './menu.svelte';
+	import Three from './three.svelte';
 
 	let name, tag;
 	function handleEvent(event) {
@@ -13,6 +14,3 @@
 
 <Menu on:title={handleEvent} />
 <Footer {name} {tag} />
-
-<style>
-</style>
