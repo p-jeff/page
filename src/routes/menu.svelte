@@ -64,6 +64,11 @@
 			id: 4,
 			name: 'KI_tchen',
 			image: '/image/kitchen.jpg'
+		},
+		{
+			id: 5,
+			name: 'McBoaty',
+			image: '/image/boaty.jpg'
 		}
 	];
 
