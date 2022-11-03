@@ -48,22 +48,22 @@
 		{
 			id: 1,
 			name: 'Collectively Narrated',
-			image: 'image.png'
+			image: '/image/image.jpg'
 		},
 		{
 			id: 2,
 			name: 'Am I Gaboniontum?',
-			image: 'DSC_2778.jpg'
+			image: '/image/amI.jpg'
 		},
 		{
 			id: 3,
 			name: 'Cash from Crisis',
-			image: 'project-2.jpg'
+			image: '/image/ss.jpg'
 		},
 		{
 			id: 4,
 			name: 'KI_tchen',
-			image: 'team2_2.jpg'
+			image: '/image/kitchen.jpg'
 		}
 	];
 
