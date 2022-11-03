@@ -2,7 +2,7 @@
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	const dispatch = createEventDispatcher();
-	let selected, next, prev;
+	let selected, next, prev, hover;
 
 	function changeSelection(direction) {
 		if (direction === 'left') {
@@ -23,7 +23,8 @@
 
 	function tellTitle() {
 		dispatch('title', {
-			name: selected.name
+			name: selected.name,
+			tag: selected.tag
 		});
 	}
 
@@ -48,27 +49,37 @@
 		{
 			id: 1,
 			name: 'Collectively Narrated',
-			image: '/image/image.jpg'
+			image: '/image/image.jpg',
+			tag: '2022, Public Space',
+			color: '#D1CCC9'
 		},
 		{
 			id: 2,
 			name: 'Am I Gaboniontum?',
-			image: '/image/amI.jpg'
+			image: '/image/amI.jpg',
+			tag: '2022, Installation',
+			color: '#3C3288'
 		},
 		{
 			id: 3,
 			name: 'Cash from Crisis',
-			image: '/image/ss.jpg'
+			image: '/image/ss.jpg',
+			tag: '2021, Film',
+			color: '#732817'
 		},
 		{
 			id: 4,
 			name: 'KI_tchen',
-			image: '/image/kitchen.jpg'
+			image: '/image/kitchen.jpg',
+			tag: '2021, Installation',
+			color: '#756F6A'
 		},
 		{
 			id: 5,
 			name: 'McBoaty',
-			image: '/image/boaty.jpg'
+			image: '/image/boaty.jpg',
+			tag: '2022, Creative Coding',
+			color: '#667689'
 		}
 	];
 
@@ -92,8 +103,20 @@
 		<img src={prev.image} alt="img" class="prev" />
 		<p>&lt;</p>
 	</div>
-	<div class="current">
-		<img src={selected.image} alt="" class="current" />
+	<div
+		class="current"
+		on:mouseenter={() => {
+			hover = true;
+		}}
+		on:mouseleave={() => {
+			hover = false;
+		}}
+	>
+		{#if hover}
+			<div class="entry" />
+		{:else}
+			<img src={selected.image} alt="" class="current" style="--shadowcolor: {selected.color}" />
+		{/if}
 	</div>
 	<div
 		class="next"
@@ -109,6 +132,11 @@
 <svelte:window on:keydown={handleKeydown} on:mousewheel={handleScroll} />
 
 <style>
+	.entry {
+		width: 100%;
+		height: 90%;
+		background-color: bisque;
+	}
 	div {
 		display: grid;
 		grid-template-columns: 10vw 80vw 10vw;
@@ -116,9 +144,10 @@
 	}
 	img.current {
 		max-width: 100%;
-		max-height: 80%;
+		max-height: 90%;
 		height: auto;
 		margin: auto;
+		box-shadow: var(--shadowcolor) 1px 1px 20px -2px;
 	}
 	.current {
 		grid-column: 2/2;
