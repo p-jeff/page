@@ -46,9 +46,9 @@
 	}
 	.right {
 		grid-column: 3/3;
-		text-align: end;
 		margin-right: 1%;
 		grid-row: 2/3;
+		text-align: center;
 	}
 	.left {
 		grid-column: 1/1;
@@ -56,6 +56,7 @@
 		margin-left: 1%;
 		margin-bottom: 1%;
 		grid-row: 2/3;
+		text-align: center;
 	}
 	.bottom {
 		grid-column: 2/2;
