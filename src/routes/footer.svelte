@@ -31,7 +31,7 @@
 		padding: 0%;
 		position: absolute;
 		bottom: 0%;
-		color: #89dbd5;
+		color: #7015ad;
 		align-items: center;
 	}
 
