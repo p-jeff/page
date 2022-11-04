@@ -27,4 +27,5 @@
 <Footer {name} {tag} />*/
 </script>
 
-<Gltf />
+<Menu on:title={handleEvent} />
+<Footer {name} {tag} />
