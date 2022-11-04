@@ -53,9 +53,9 @@
 			image: '/image/image.jpg',
 			tag: '2022, Public Space',
 			color: '#D1CCC9',
-			model: 'sweeper.obj',
+			model: 'vest.obj',
 			material: '#FA6B00',
-			zoom: [1, 1, 1]
+			zoom: [0.015, 0.015, 0.015]
 		},
 		{
 			id: 2,
@@ -95,7 +95,7 @@
 			color: '#667689',
 			model: 'sun.obj',
 			material: '#F3AA3A',
-			zoom: [10, 10, 10]
+			zoom: [0.01, 0.01, 0.01]
 		}
 	];
 

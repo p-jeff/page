@@ -3,7 +3,7 @@
 	import * as SC from 'svelte-cubed';
 	import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 	import { TextureLoader } from 'three';
-	import { afterUpdate, beforeUpdate, onMount } from 'svelte';
+	import { beforeUpdate, onMount } from 'svelte';
 
 	export let current;
 	export let color;
@@ -40,16 +40,13 @@
 	{#if model}
 		<SC.Mesh
 			geometry={model}
-			material={new THREE.MeshToonMaterial({
-				color: new THREE.Color(color),
-				gradientMap: fiveTone
-			})}
+			material={new THREE.MeshNormalMaterial({})}
 			scale={zoom}
-			rotation={[0.3, spin, spin]}
+			rotation={[0.3, spin, 0]}
 		/>
 	{/if}
 
 	<SC.PerspectiveCamera position={[1, 1, 3]} />
 	<SC.OrbitControls enableZoom={true} enablePan={false} />
-	<SC.PointLight intensity={1.5} position={[0, 5, 5]} />
+	<SC.DirectionalLight intensity={0.8} position={[0, 5, 5]} />
 </SC.Canvas>
