@@ -1,20 +1,20 @@
 <script>
 	import * as THREE from 'three';
 	import * as SC from 'svelte-cubed';
-	import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
+	import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 	import { onMount } from 'svelte';
 	import { MeshNormalMaterial, PointLight, SpotLightHelper } from 'three';
 
-	const modelURL = 'stars.obj';
+	const modelURL = 'spacebear.glb';
 	let model = null;
 
-	function loadOBJ(url) {
-		const loader = new OBJLoader();
+	function loadGLTF(url) {
+		const loader = new GLTFLoader();
 		return loader.loadAsync(url);
 	}
 
 	onMount(() => {
-		loadOBJ(modelURL).then((_model) => (model = _model.children[0].geometry));
+		loadGLTF(modelURL).then((_model) => (model = _model));
 	});
 
 	let spin = 0;
@@ -26,13 +26,7 @@
 
 <SC.Canvas alpha={true} antialias shadows={true}>
 	{#if model}
-		{@debug model}
-		<SC.Mesh
-			geometry={new THREE.TorusKnotGeometry(0.5, 0.2, 500, 16)}
-			scale={[1, 1, 1]}
-			material={new THREE.MeshNormalMaterial()}
-			rotation={[spin, spin, -spin]}
-		/>
+		<SC.Primitive object={model.scene} scale={[0.05, 0.05, 0.05]} />
 	{/if}
 
 	<SC.PerspectiveCamera position={[1, 1, 3]} />

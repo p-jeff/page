@@ -1,5 +1,6 @@
 <script>
 	import { createEventDispatcher, onMount } from 'svelte';
+	import Entry from './entry.svelte';
 	import Three from './three.svelte';
 
 	const dispatch = createEventDispatcher();
@@ -55,7 +56,13 @@
 			color: '#D1CCC9',
 			model: 'vest.obj',
 			material: '#FA6B00',
-			zoom: [0.015, 0.015, 0.015]
+			zoom: [0.015, 0.015, 0.015],
+			content: {
+				text: 'Human interaction has come down to a minimum in this new world of rushing coats, hurrying boots, and covered faces. In the modern metropolis, public space is for commuting, getting you from here to there as streamlined as possible. Where it is not, relaxation is planned, mandated, and structured. Ownership is oblivious. Care not given. Lines are blurred. We rarely talk to people we do not know. We all are stuck in our worlds. Bursting the proverbial bubble is no small task. Directly taking on the ever-growing isolation would be bold and arguably naive, so we start smaller and try and talk to people— seemingly simple. The event "_____, Collectively Narrated" aims to facilitate random interactions again by offering a community and space-focused event. It allows passersby to partake in the building of objects. We are not building the object to complete public space; we want to involve people and hear what they say. Talking to people and recording their stories and thoughts on a space gives a representative core sample of the area. Their stories are then displayed on the respective objects, allowing people to understand the objects and gain a deeper understanding of space and the people that inhabit it.',
+				credit:
+					'Together with Miriam Daxl, Shannon McLachlan and Stephan Sinn @ Design Investigations, die Angewandte, Vienna, Austria 2022',
+				images: ['/image/amI.jpg', '/image/amI.jpg', '/image/amI.jpg']
+			}
 		},
 		{
 			id: 2,
@@ -65,7 +72,12 @@
 			color: '#3C3288',
 			model: 'gaboni.obj',
 			material: '#B66DC6',
-			zoom: [0.08, 0.08, 0.08]
+			zoom: [0.08, 0.08, 0.08],
+			content: {
+				text: 'BussiBaba',
+				credit: 'meBITCH',
+				images: ['/image/amI.jpg', '/image/amI.jpg', '/image/amI.jpg']
+			}
 		},
 		{
 			id: 3,
@@ -75,7 +87,12 @@
 			color: '#732817',
 			model: 'sweeper.obj',
 			material: '#EA9A55',
-			zoom: [0.015, 0.015, 0.015]
+			zoom: [0.015, 0.015, 0.015],
+			content: {
+				text: 'BussiBaba',
+				credit: 'meBITCH',
+				images: ['/image/amI.jpg', '/image/amI.jpg', '/image/amI.jpg']
+			}
 		},
 		{
 			id: 4,
@@ -85,7 +102,12 @@
 			color: '#756F6A',
 			model: 'cow.obj',
 			material: '#480703',
-			zoom: [3.2, 3.2, 3.2]
+			zoom: [3.2, 3.2, 3.2],
+			content: {
+				text: 'BussiBaba',
+				credit: 'meBITCH',
+				images: ['/image/amI.jpg', '/image/amI.jpg', '/image/amI.jpg']
+			}
 		},
 		{
 			id: 5,
@@ -95,7 +117,12 @@
 			color: '#667689',
 			model: 'sun.obj',
 			material: '#F3AA3A',
-			zoom: [0.01, 0.01, 0.01]
+			zoom: [0.01, 0.01, 0.01],
+			content: {
+				text: 'BussiBaba',
+				credit: 'meBITCH',
+				images: ['/image/amI.jpg', '/image/amI.jpg', '/image/amI.jpg']
+			}
 		}
 	];
 
@@ -129,7 +156,7 @@
 		}}
 	>
 		{#if hover}
-			<div class="entry" />
+			<div class="entry current"><Entry title={selected.name} content={selected.content} /></div>
 		{:else}
 			<img src={selected.image} alt="" class="current" style="--shadowcolor: {selected.color}" />
 		{/if}
@@ -144,11 +171,13 @@
 		<p>&gt;</p>
 	</div>
 
-	<div class="threeContainer">
-		<div class="threeWrapper">
-			<Three current={selected.model} color={selected.material} zoom={selected.zoom} />
+	{#if !hover}
+		<div class="threeContainer">
+			<div class="threeWrapper">
+				<Three current={selected.model} color={selected.material} zoom={selected.zoom} />
+			</div>
 		</div>
-	</div>
+	{/if}
 </div>
 
 <svelte:window on:keydown={handleKeydown} on:mousewheel={handleScroll} />
@@ -157,7 +186,7 @@
 	.entry {
 		width: 100%;
 		height: 90%;
-		background-color: bisque;
+		background-color: #181619;
 	}
 	div {
 		display: grid;
@@ -171,6 +200,7 @@
 		display: grid;
 		grid-template-columns: 40vw 40vw;
 		grid-template-rows: 42vh 60vh;
+		pointer-events: none;
 	}
 
 	.threeWrapper {
