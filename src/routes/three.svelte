@@ -6,7 +6,6 @@
 	import { beforeUpdate, onMount } from 'svelte';
 
 	export let current;
-	export let color;
 	export let zoom;
 	let model, fiveTone;
 

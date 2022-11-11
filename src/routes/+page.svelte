@@ -33,4 +33,5 @@
 <Footer {name} {tag} />*/
 </script>
 
-<Entry content={selected.content} />
+<Menu on:title={handleEvent} />
+<Footer {name} {tag} />

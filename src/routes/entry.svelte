@@ -1,6 +1,8 @@
 <script>
+	import Sweeper from './sweeper.svelte';
 	export let content;
 	export let title;
+	export let custom;
 </script>
 
 <div class="layout">
@@ -15,8 +17,9 @@
 	</div>
 
 	<div class="gallery">
+		<svelte:component this={content.component} />
 		{#each content.images as image}
-			<img src={image} />
+			<img src={image} alt="" />
 		{/each}
 	</div>
 </div>
@@ -26,11 +29,14 @@
 		display: grid;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 5% 95%;
+		height: 80vh;
+		width: 80vw;
 	}
 	h1 {
 		grid-column: 1/2;
 		grid-row: 1/1;
 		color: #fefeef;
+		margin-top: 0%;
 	}
 	.text {
 		grid-column: 2/2;
@@ -41,7 +47,6 @@
 		grid-column: 1/2;
 		grid-row: 2/3;
 		overflow-y: scroll;
-		height: 65%;
 		-ms-overflow-style: none; /* IE and Edge */
 		scrollbar-width: none; /* Firefox */
 	}
