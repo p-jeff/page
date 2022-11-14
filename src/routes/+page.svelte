@@ -1,10 +1,13 @@
 <script>
-	import { DecrementWrapStencilOp } from 'three';
-	import Entry from './entry.svelte';
+	import { onMount } from 'svelte';
 	import Footer from './footer.svelte';
-	import Gltf from './gltf.svelte';
 	import Menu from './menu.svelte';
-	import Three from './three.svelte';
+	import Portrait from './portrait.svelte';
+
+	let innerHeight, innerWidth, portait;
+	onMount(() => {
+		portait = innerHeight > innerWidth;
+	});
 
 	let name, tag;
 	function handleEvent(event) {
@@ -13,25 +16,16 @@
 		tag = event.detail.tag;
 	}
 
-	let selected = {
-		id: 1,
-		name: 'Collectively Narrated',
-		image: '/image/image.jpg',
-		tag: '2022, Public Space',
-		color: '#D1CCC9',
-		model: 'vest.obj',
-		material: '#FA6B00',
-		zoom: [0.01, 0.01, 0.01],
-		content: {
-			text: 'BussiBaba',
-			credit: 'meBITCH',
-			images: ['/image/amI.jpg', '/image/amI.jpg', '/image/amI.jpg']
-		}
-	};
-
 	/*<Menu on:title={handleEvent} />
 <Footer {name} {tag} />*/
+	console.log(portait);
 </script>
 
-<Menu on:title={handleEvent} />
-<Footer {name} {tag} />
+<svelte:window bind:innerHeight bind:innerWidth />
+
+{#if !portait}
+	<Menu on:title={handleEvent} />
+	<Footer {name} {tag} />
+{:else}
+	<Portrait />
+{/if}

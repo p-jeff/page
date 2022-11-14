@@ -55,24 +55,27 @@
 	let content = [
 		{
 			id: 1,
-			name: 'Collectively Narrated',
-			image: '/image/image.jpg',
-			tag: '2022, Public Space',
-			color: '#D1CCC9',
-			three: false,
+			name: 'Cash from Crisis',
+			image: '/image/ss.jpg',
+			tag: '2021, Film',
+			color: '#732817',
+			three: true,
+			model: 'sweeper.obj',
+			material: '#EA9A55',
+			zoom: [0.015, 0.015, 0.015],
 			content: {
-				text: 'Human interaction has come down to a minimum in this new world of rushing coats, hurrying boots, and covered faces. In the modern metropolis, public space is for commuting, getting you from here to there as streamlined as possible. Where it is not, relaxation is planned, mandated, and structured. Ownership is oblivious. Care not given. Lines are blurred. We rarely talk to people we do not know. We all are stuck in our worlds. Bursting the proverbial bubble is no small task. Directly taking on the ever-growing isolation would be bold and arguably naive, so we start smaller and try and talk to people— seemingly simple. The event "_____, Collectively Narrated" aims to facilitate random interactions again by offering a community and space-focused event. It allows passersby to partake in the building of objects. We are not building the object to complete public space; we want to involve people and hear what they say. Talking to people and recording their stories and thoughts on a space gives a representative core sample of the area. Their stories are then displayed on the respective objects, allowing people to understand the objects and gain a deeper understanding of space and the people that inhabit it.',
+				text: "Crises always affect people's worries and needs, making them more susceptible to comforting claims, hoax products and lies. Energized water, placebo pills and DVDs with 60 minutes of a healing gaze are just a few examples showing how creative some “inventors” become to earn the extra dollar. As with many products that are promising the supernatural. An easy pseudoscientific alternative is offered in parallel to a scientific – but maybe uncomfortable – consens. These machinations boom during a crisis. Based on our observations, we set out and created a fictional venture in the field of pseudoscience. How do you make such a convincing alternative, how much function is too much, what are matters of belief, and perhaps most important how does one end up creating these systems? Mainly focusing on the user interaction and the associated effects on the body – we developed our very own fake health tool. A light-brush. We then incorporated the product and our results into a short film.",
 				credit:
-					'Together with Miriam Daxl, Shannon McLachlan and Stephan Sinn @ Design Investigations, die Angewandte, Vienna, Austria 2022',
+					'Together with Valentina Sturn and Leo Mühlfeld @ Design Investigations, die Angewandte, Vienna, Austria 2021',
 				images: [
-					'/image/contentImage/cn1.jpg',
-					'/image/contentImage/cn2.jpg',
-					,
-					'/image/contentImage/cn4.png',
-					'/image/contentImage/cn5.jpg'
+					'/image/contentImage/cfc1.jpg',
+					'/image/contentImage/cfc2.jpg',
+					'/image/contentImage/cfc3.jpg',
+					'/image/contentImage/cfc4.jpg',
+					'/image/contentImage/cfc5.jpg'
 				],
-				custom: false,
-				component: Cn
+				custom: true,
+				component: Sweeper
 			}
 		},
 		{
@@ -100,27 +103,24 @@
 		},
 		{
 			id: 3,
-			name: 'Cash from Crisis',
-			image: '/image/ss.jpg',
-			tag: '2021, Film',
-			color: '#732817',
-			three: true,
-			model: 'sweeper.obj',
-			material: '#EA9A55',
-			zoom: [0.015, 0.015, 0.015],
+			name: 'Collectively Narrated',
+			image: '/image/image.jpg',
+			tag: '2022, Public Space',
+			color: '#D1CCC9',
+			three: false,
 			content: {
-				text: "Crises always affect people's worries and needs, making them more susceptible to comforting claims, hoax products and lies. Energized water, placebo pills and DVDs with 60 minutes of a healing gaze are just a few examples showing how creative some “inventors” become to earn the extra dollar. As with many products that are promising the supernatural. An easy pseudoscientific alternative is offered in parallel to a scientific – but maybe uncomfortable – consens. These machinations boom during a crisis. Based on our observations, we set out and created a fictional venture in the field of pseudoscience. How do you make such a convincing alternative, how much function is too much, what are matters of belief, and perhaps most important how does one end up creating these systems? Mainly focusing on the user interaction and the associated effects on the body – we developed our very own fake health tool. A light-brush. We then incorporated the product and our results into a short film.",
+				text: 'Human interaction has come down to a minimum in this new world of rushing coats, hurrying boots, and covered faces. In the modern metropolis, public space is for commuting, getting you from here to there as streamlined as possible. Where it is not, relaxation is planned, mandated, and structured. Ownership is oblivious. Care not given. Lines are blurred. We rarely talk to people we do not know. We all are stuck in our worlds. Bursting the proverbial bubble is no small task. Directly taking on the ever-growing isolation would be bold and arguably naive, so we start smaller and try and talk to people— seemingly simple. The event "_____, Collectively Narrated" aims to facilitate random interactions again by offering a community and space-focused event. It allows passersby to partake in the building of objects. We are not building the object to complete public space; we want to involve people and hear what they say. Talking to people and recording their stories and thoughts on a space gives a representative core sample of the area. Their stories are then displayed on the respective objects, allowing people to understand the objects and gain a deeper understanding of space and the people that inhabit it.',
 				credit:
-					'Together with Valentina Sturn and Leo Mühlfeld @ Design Investigations, die Angewandte, Vienna, Austria 2021',
+					'Together with Miriam Daxl, Shannon McLachlan and Stephan Sinn @ Design Investigations, die Angewandte, Vienna, Austria 2022',
 				images: [
-					'/image/contentImage/cfc1.jpg',
-					'/image/contentImage/cfc2.jpg',
-					'/image/contentImage/cfc3.jpg',
-					'/image/contentImage/cfc4.jpg',
-					'/image/contentImage/cfc5.jpg'
+					'/image/contentImage/cn1.jpg',
+					'/image/contentImage/cn2.jpg',
+					,
+					'/image/contentImage/cn4.png',
+					'/image/contentImage/cn5.jpg'
 				],
-				custom: true,
-				component: Sweeper
+				custom: false,
+				component: Cn
 			}
 		},
 		{

@@ -19,10 +19,11 @@
 	on:click={handleClick}
 >
 	{#if !hover}
-		<img src="/image/contentImage/cn3.png" />
+		<img src="/image/contentImage/cn3.png" alt="" />
+		<h1>Visit on Web &<br />Listen to Audio</h1>
 	{:else}
 		<h1>Visit on Web &<br />Listen to Audio</h1>
-		<img src="/image/contentImage/cn3.png" />
+		<img src="/image/contentImage/cn3.png" alt="" />
 	{/if}
 </div>
 
@@ -40,10 +41,6 @@
 		opacity: 0.5;
 		cursor: pointer;
 	}
-	iframe {
-		pointer-events: none;
-	}
-
 	img {
 		max-width: 90%;
 		max-height: 100%;

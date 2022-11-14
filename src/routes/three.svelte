@@ -2,27 +2,16 @@
 	import * as THREE from 'three';
 	import * as SC from 'svelte-cubed';
 	import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
-	import { TextureLoader } from 'three';
-	import { beforeUpdate, onMount } from 'svelte';
+	import { beforeUpdate } from 'svelte';
 
 	export let current;
 	export let zoom;
-	let model, fiveTone;
+	let model;
 
 	function loadOBJ(url) {
 		const loader = new OBJLoader();
 		return loader.loadAsync(url);
 	}
-
-	function loadGradient() {
-		const textureLoader = new TextureLoader();
-		fiveTone = textureLoader.load('fiveTone.jpg');
-		fiveTone.minFilter = THREE.NearestFilter;
-		fiveTone.magFilter = THREE.NearestFilter;
-	}
-	onMount(() => {
-		loadGradient();
-	});
 
 	beforeUpdate(() => {
 		loadOBJ(current).then((_model) => (model = _model.children[0].geometry));
