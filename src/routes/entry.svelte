@@ -42,6 +42,9 @@
 		grid-column: 2/2;
 		grid-row: 2/2;
 		color: #fefeef;
+		overflow-y: scroll;
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
 	}
 	.gallery {
 		grid-column: 1/2;
@@ -57,5 +60,9 @@
 		max-height: 50vh;
 		margin: 2%;
 		width: 90%;
+	}
+
+	p {
+		font-size: 20px;
 	}
 </style>

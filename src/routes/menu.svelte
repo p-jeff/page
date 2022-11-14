@@ -3,6 +3,7 @@
 	import Boaty from './boaty.svelte';
 	import Cn from './cn.svelte';
 	import Entry from './entry.svelte';
+	import Kitchen from './kitchen.svelte';
 	import Sweeper from './sweeper.svelte';
 	import Three from './three.svelte';
 
@@ -143,7 +144,8 @@
 					'page/image/contentImage/ki4.jpg',
 					'page/image/contentImage/ki5.jpg'
 				],
-				custom: false
+				custom: false,
+				component: Kitchen
 			}
 		},
 		{
@@ -157,7 +159,7 @@
 			material: '#F3AA3A',
 			zoom: [0.01, 0.01, 0.01],
 			content: {
-				text: 'A simple exloration into animating using javascript as well as working with various APIs, in this Case OpenWeather, Location and Time',
+				text: 'Meant as a digitial window, a browser based animation changing with your local time and weather data. A simple exloration into animating using javascript as well as working with various APIs, in this Case OpenWeather, Location and Time',
 				credit: 'Built in Summer 2022 using Svelte and Anime.js',
 				images: ['page/image/contentImage/boaty2.jpg', 'page/image/contentImage/boaty3.jpg'],
 				custom: false,
