@@ -21,6 +21,10 @@
 	console.log(portait);
 </script>
 
+<svelte:head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans" />
+</svelte:head>
+
 <svelte:window bind:innerHeight bind:innerWidth />
 
 {#if !portait}

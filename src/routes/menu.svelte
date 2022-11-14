@@ -93,10 +93,10 @@
 				credit:
 					'Together with Sophie Hausmann, Emilie Dyrlow Madsen and Florian Sapp @ Design Investigations, die Angewandte, Vienna, Austria 2022, in Collaboration with the Natural History Museum Vienna',
 				images: [
-					'/image/contentImage/gaboni1.jpeg',
-					'/image/contentImage/gaboni2.jpeg',
-					'/image/contentImage/gaboni3.jpeg',
-					'/image/contentImage/gaboni4.jpeg'
+					'/image/contentImage/gaboni1.jpg',
+					'/image/contentImage/gaboni2.jpg',
+					'/image/contentImage/gaboni3.jpg',
+					'/image/contentImage/gaboni4.jpg'
 				],
 				custom: false
 			}
@@ -115,7 +115,6 @@
 				images: [
 					'/image/contentImage/cn1.jpg',
 					'/image/contentImage/cn2.jpg',
-					,
 					'/image/contentImage/cn4.png',
 					'/image/contentImage/cn5.jpg'
 				],
@@ -141,8 +140,8 @@
 					'/image/contentImage/ki1.jpg',
 					'/image/contentImage/ki2.jpg',
 					'/image/contentImage/ki3.jpg',
-					'/image/contentImage/ki4.png',
-					'/image/contentImage/ki5.png'
+					'/image/contentImage/ki4.jpg',
+					'/image/contentImage/ki5.jpg'
 				],
 				custom: false
 			}
@@ -160,7 +159,7 @@
 			content: {
 				text: 'A simple exloration into animating using javascript as well as working with various APIs, in this Case OpenWeather, Location and Time',
 				credit: 'Built in Summer 2022 using Svelte and Anime.js',
-				images: ['/image/contentImage/boaty2.png', '/image/contentImage/boaty3.png'],
+				images: ['/image/contentImage/boaty2.jpg', '/image/contentImage/boaty3.jpg'],
 				custom: false,
 				component: Boaty
 			}
