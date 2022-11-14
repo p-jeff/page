@@ -7,7 +7,8 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"deploy": "node ./gh-pages.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
@@ -23,6 +24,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"gh-pages": "^4.0.0",
 		"svelte-cubed": "^0.2.1",
 		"three": "^0.146.0"
 	}
