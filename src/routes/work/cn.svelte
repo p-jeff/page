@@ -29,7 +29,7 @@
 
 <style>
 	h1 {
-		color: #7015ad;
+		color: #6c6d57;
 		margin: auto;
 		position: absolute;
 		top: 40%;
@@ -42,7 +42,7 @@
 		cursor: pointer;
 	}
 	img {
-		max-width: 90%;
+		max-width: 95%;
 		max-height: 100%;
 	}
 </style>

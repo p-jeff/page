@@ -1,6 +1,6 @@
 <script src="https://player.vimeo.com/api/player.js"></script>
 
-<div style="padding:75% 0 0 0;position:relative;width:90%;margin:2%">
+<div style="padding:56.25% 0 0 0;position:relative;width:95%;margin:2%">
 	<iframe
 		src="https://player.vimeo.com/video/770822921?h=f7e3766d8f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
 		frameborder="0"

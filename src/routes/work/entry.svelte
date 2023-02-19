@@ -1,8 +1,6 @@
 <script>
-	import Sweeper from './sweeper.svelte';
 	export let content;
 	export let title;
-	export let custom;
 </script>
 
 <div class="layout">
@@ -33,25 +31,34 @@
 		width: 80vw;
 	}
 	h1 {
-		grid-column: 1/2;
+		grid-column: 2/2;
 		grid-row: 1/1;
 		color: #6c6d57;
 		margin-top: 0%;
+		font-weight: 400;
+		text-align: right;
+		font-size: 5vh;
 	}
 	.text {
 		grid-column: 2/2;
 		grid-row: 2/2;
 		color: #6c6d57;
-		overflow-y: scroll;
+		overflow-y: auto;
 		-ms-overflow-style: none; /* IE and Edge */
-		scrollbar-width: none; /* Firefox */
+		/* Firefox */
+		scrollbar-width: thin;
+		scrollbar-color: rgb(92, 92, 92) #fefeef;
+		font-weight: 400;
+		margin: 2%;
+		font-family: 'Lustria';
 	}
 	.gallery {
 		grid-column: 1/2;
 		grid-row: 2/3;
-		overflow-y: scroll;
-		-ms-overflow-style: none; /* IE and Edge */
-		scrollbar-width: none; /* Firefox */
+		overflow-y: auto;
+		/* Firefox */
+		scrollbar-width: thin;
+		scrollbar-color: rgb(92, 92, 92) #fefeef;
 	}
 	.gallery::-webkit-scrollbar {
 		display: none;
@@ -59,7 +66,7 @@
 	img {
 		max-height: 50vh;
 		margin: 2%;
-		width: 90%;
+		width: 95%;
 	}
 
 	p {
