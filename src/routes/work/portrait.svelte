@@ -148,10 +148,10 @@
 
 <style>
 	h1 {
-		color: #7015ad;
+		color: #6c6d57;
 	}
 	h2 {
-		color: #7015ad;
+		color: #6c6d57;
 		cursor: pointer;
 	}
 

@@ -37,7 +37,7 @@
 
 <style>
 	h1 {
-		color: #7015ad;
+		color: #fefeef;
 		margin: auto;
 		position: absolute;
 		top: 50%;

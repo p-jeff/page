@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import '../styles.css';
 
 	export let name;
 	export let tag;
@@ -17,7 +16,7 @@
 <div>
 	<h1 class="left">{time}</h1>
 	<h1 class="center">{name}</h1>
-	<h1 class="right">Johannes Felix Lotze</h1>
+	<a class="right" href="/">Johannes Felix Lotze</a>
 	<h1 class="bottom">{tag}</h1>
 </div>
 
@@ -31,13 +30,20 @@
 		padding: 0%;
 		position: absolute;
 		bottom: 0%;
-		color: #7015ad;
+		color: #6c6d57;
 		align-items: center;
 	}
 
 	h1 {
 		font-size: 3vh;
 	}
+
+	a {
+		text-decoration: none;
+		font-size: 3vh;
+		color: #6c6d57;
+	}
+
 	.center {
 		text-align: center;
 		grid-column: 2/2;

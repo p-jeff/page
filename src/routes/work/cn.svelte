@@ -19,11 +19,11 @@
 	on:click={handleClick}
 >
 	{#if !hover}
-		<img src="page/image/contentImage/cn3.png" alt="" />
+		<img src="image/contentImage/cn3.png" alt="" />
 		<h1>Visit on Web &<br />Listen to Audio</h1>
 	{:else}
 		<h1>Visit on Web &<br />Listen to Audio</h1>
-		<img src="page/image/contentImage/cn3.png" alt="" />
+		<img src="image/contentImage/cn3.png" alt="" />
 	{/if}
 </div>
 

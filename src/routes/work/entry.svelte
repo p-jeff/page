@@ -35,13 +35,13 @@
 	h1 {
 		grid-column: 1/2;
 		grid-row: 1/1;
-		color: #fefeef;
+		color: #6c6d57;
 		margin-top: 0%;
 	}
 	.text {
 		grid-column: 2/2;
 		grid-row: 2/2;
-		color: #fefeef;
+		color: #6c6d57;
 		overflow-y: scroll;
 		-ms-overflow-style: none; /* IE and Edge */
 		scrollbar-width: none; /* Firefox */
