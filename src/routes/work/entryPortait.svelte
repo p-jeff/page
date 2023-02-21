@@ -30,7 +30,8 @@
 	}
 
 	p {
-		color: #fefeef;
+		color: #6c6d57;
+		font-family: 'Lustria', serif;
 		text-align: right;
 		margin-left: 2%;
 	}

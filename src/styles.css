@@ -2,6 +2,6 @@ body {
     font-family: 'Josefin Sans', serif;
     padding: 0%;
     margin: 0%;
-    overflow: hidden;
-    background-color: #181619;
+    overflow-x: hidden;
+    background-color: #fefeef;
 }

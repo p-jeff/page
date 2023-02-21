@@ -19,17 +19,17 @@
 	on:click={handleClick}
 >
 	{#if !hover}
-		<img src="page/image/contentImage/cn3.png" alt="" />
+		<img src="image/contentImage/cn3.png" alt="" />
 		<h1>Visit on Web &<br />Listen to Audio</h1>
 	{:else}
 		<h1>Visit on Web &<br />Listen to Audio</h1>
-		<img src="page/image/contentImage/cn3.png" alt="" />
+		<img src="image/contentImage/cn3.png" alt="" />
 	{/if}
 </div>
 
 <style>
 	h1 {
-		color: #7015ad;
+		color: #6c6d57;
 		margin: auto;
 		position: absolute;
 		top: 40%;
@@ -42,7 +42,7 @@
 		cursor: pointer;
 	}
 	img {
-		max-width: 90%;
+		max-width: 95%;
 		max-height: 100%;
 	}
 </style>

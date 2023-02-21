@@ -3,8 +3,8 @@
 	import Boaty from './boaty.svelte';
 	import Cn from './cn.svelte';
 	import Entry from './entry.svelte';
+	import Kitchen from './kitchen.svelte';
 	import Sweeper from './sweeper.svelte';
-	import Three from './three.svelte';
 
 	const dispatch = createEventDispatcher();
 	let selected, next, prev, hover, three;
@@ -42,6 +42,9 @@
 		if (event.key === 'ArrowLeft') {
 			changeSelection('left');
 		}
+		if (event.key === 'Enter') {
+			hover = !hover;
+		}
 	}
 
 	function handleScroll(event) {
@@ -56,23 +59,19 @@
 		{
 			id: 1,
 			name: 'Cash from Crisis',
-			image: 'page/image/ss.jpg',
+			image: 'image/ss.jpg',
 			tag: '2021, Film',
 			color: '#732817',
-			three: true,
-			model: '/page/sweeper.obj',
-			material: '#EA9A55',
-			zoom: [0.015, 0.015, 0.015],
 			content: {
 				text: "Crises always affect people's worries and needs, making them more susceptible to comforting claims, hoax products and lies. Energized water, placebo pills and DVDs with 60 minutes of a healing gaze are just a few examples showing how creative some “inventors” become to earn the extra dollar. As with many products that are promising the supernatural. An easy pseudoscientific alternative is offered in parallel to a scientific – but maybe uncomfortable – consens. These machinations boom during a crisis. Based on our observations, we set out and created a fictional venture in the field of pseudoscience. How do you make such a convincing alternative, how much function is too much, what are matters of belief, and perhaps most important how does one end up creating these systems? Mainly focusing on the user interaction and the associated effects on the body – we developed our very own fake health tool. A light-brush. We then incorporated the product and our results into a short film.",
 				credit:
 					'Together with Valentina Sturn and Leo Mühlfeld @ Design Investigations, die Angewandte, Vienna, Austria 2021',
 				images: [
-					'page/image/contentImage/cfc1.jpg',
-					'page/image/contentImage/cfc2.jpg',
-					'page/image/contentImage/cfc3.jpg',
-					'page/image/contentImage/cfc4.jpg',
-					'page/image/contentImage/cfc5.jpg'
+					'image/contentImage/cfc1.jpg',
+					'image/contentImage/cfc2.jpg',
+					'image/contentImage/cfc3.jpg',
+					'image/contentImage/cfc4.jpg',
+					'image/contentImage/cfc5.jpg'
 				],
 				custom: true,
 				component: Sweeper
@@ -81,11 +80,11 @@
 		{
 			id: 2,
 			name: 'Am I Gaboniontum?',
-			image: 'page/image/amI.jpg',
+			image: 'image/amI.jpg',
 			tag: '2022, Installation',
 			color: '#3C3288',
 			three: true,
-			model: 'page/gaboni.obj',
+			model: 'gaboni.obj',
 			material: '#B66DC6',
 			zoom: [0.08, 0.08, 0.08],
 			content: {
@@ -93,10 +92,10 @@
 				credit:
 					'Together with Sophie Hausmann, Emilie Dyrlow Madsen and Florian Sapp @ Design Investigations, die Angewandte, Vienna, Austria 2022, in Collaboration with the Natural History Museum Vienna',
 				images: [
-					'page/image/contentImage/gaboni1.jpg',
-					'page/image/contentImage/gaboni2.jpg',
-					'page/image/contentImage/gaboni3.jpg',
-					'page/image/contentImage/gaboni4.jpg'
+					'image/contentImage/gaboni1.jpg',
+					'image/contentImage/gaboni2.jpg',
+					'image/contentImage/gaboni3.jpg',
+					'image/contentImage/gaboni4.jpg'
 				],
 				custom: false
 			}
@@ -104,7 +103,7 @@
 		{
 			id: 3,
 			name: 'Collectively Narrated',
-			image: 'page/image/image.jpg',
+			image: 'image/image.jpg',
 			tag: '2022, Public Space',
 			color: '#D1CCC9',
 			three: false,
@@ -113,10 +112,10 @@
 				credit:
 					'Together with Miriam Daxl, Shannon McLachlan and Stephan Sinn @ Design Investigations, die Angewandte, Vienna, Austria 2022',
 				images: [
-					'page/image/contentImage/cn1.jpg',
-					'page/image/contentImage/cn2.jpg',
-					'page/image/contentImage/cn4.png',
-					'page/image/contentImage/cn5.jpg'
+					'image/contentImage/cn1.jpg',
+					'image/contentImage/cn2.jpg',
+					'image/contentImage/cn4.png',
+					'image/contentImage/cn5.jpg'
 				],
 				custom: false,
 				component: Cn
@@ -125,10 +124,10 @@
 		{
 			id: 4,
 			name: 'KI_tchen',
-			image: 'page/image/kitchen.jpg',
+			image: 'image/kitchen.jpg',
 			tag: '2021, Installation',
 			color: '#756F6A',
-			model: 'page/cow.obj',
+			model: 'cow.obj',
 			three: true,
 			material: '#480703',
 			zoom: [3.2, 3.2, 3.2],
@@ -137,19 +136,20 @@
 				credit:
 					'Together with Mia Tesic and Eszter Zwickl @ Design Investigations, die Angewandte, Vienna, Austria 2021',
 				images: [
-					'page/image/contentImage/ki1.jpg',
-					'page/image/contentImage/ki2.jpg',
-					'page/image/contentImage/ki3.jpg',
-					'page/image/contentImage/ki4.jpg',
-					'page/image/contentImage/ki5.jpg'
+					'image/contentImage/ki1.jpg',
+					'image/contentImage/ki2.jpg',
+					'image/contentImage/ki3.jpg',
+					'image/contentImage/ki4.jpg',
+					'image/contentImage/ki5.jpg'
 				],
-				custom: false
+				custom: false,
+				component: Kitchen
 			}
 		},
 		{
 			id: 5,
 			name: 'McBoaty',
-			image: 'page/image/boaty.jpg',
+			image: 'image/boaty.jpg',
 			tag: '2022, Creative Coding',
 			color: '#667689',
 			three: false,
@@ -157,9 +157,9 @@
 			material: '#F3AA3A',
 			zoom: [0.01, 0.01, 0.01],
 			content: {
-				text: 'A simple exloration into animating using javascript as well as working with various APIs, in this Case OpenWeather, Location and Time',
+				text: 'Meant as a digitial window, a browser based animation changing with your local time and weather data. A simple exloration into animating using javascript as well as working with various APIs, in this Case OpenWeather, Location and Time',
 				credit: 'Built in Summer 2022 using Svelte and Anime.js',
-				images: ['page/image/contentImage/boaty2.jpg', 'page/image/contentImage/boaty3.jpg'],
+				images: ['image/contentImage/boaty2.jpg', 'image/contentImage/boaty3.jpg'],
 				custom: false,
 				component: Boaty
 			}
@@ -212,15 +212,6 @@
 		<img src={next.image} alt="" class="next" />
 		<p>&gt;</p>
 	</div>
-	{#if three}
-		{#if !hover}
-			<div class="threeContainer">
-				<div class="threeWrapper">
-					<Three current={selected.model} color={selected.material} zoom={selected.zoom} />
-				</div>
-			</div>
-		{/if}
-	{/if}
 </div>
 
 <svelte:window on:keydown={handleKeydown} on:mousewheel={handleScroll} />
@@ -229,27 +220,13 @@
 	.entry {
 		width: 100%;
 		height: 90%;
-		background-color: #181619;
+		background-color: #fefeef;
+		box-shadow: #ffffff 1px 1px 20px -2px;
 	}
 	div {
 		display: grid;
 		grid-template-columns: 10vw 80vw 10vw;
 		grid-template-rows: 88vh;
-	}
-	.threeContainer {
-		grid-column: 2/2;
-		grid-row: 1/1;
-		z-index: 3;
-		display: grid;
-		grid-template-columns: 40vw 40vw;
-		grid-template-rows: 42vh 60vh;
-		pointer-events: none;
-	}
-
-	.threeWrapper {
-		position: relative;
-		grid-row: 2/2;
-		grid-column: 2/2;
 	}
 
 	img.current {

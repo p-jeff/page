@@ -13,7 +13,7 @@
 </script>
 
 <div
-	style="position:relative;width:90%;margin:2%;height:300px"
+	style="position:relative;width:95%;margin:2%;height:300px"
 	on:mouseover={mouseOver}
 	on:mouseleave={mouseLeave}
 	on:click={handleClick}
@@ -37,7 +37,7 @@
 
 <style>
 	h1 {
-		color: #7015ad;
+		color: #fefeef;
 		margin: auto;
 		position: absolute;
 		top: 50%;

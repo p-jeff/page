@@ -3,7 +3,6 @@
 	import Menu from './work/menu.svelte';
 	import Blog from './blog.svelte';
 	import About from './about.svelte';
-	import PortraitOld from './work/portrait_old.svelte';
 </script>
 
 <svelte:head>
@@ -21,11 +20,11 @@
 	</div>
 
 	<h1>Selected Works</h1>
-	<PortraitOld />
+	<Menu />
 	<h1>Blog</h1>
-	<Blog portrait={true} />
+	<Blog />
 	<h1>About</h1>
-	<About portrait={true} />
+	<About />
 </div>
 
 <style>
@@ -60,7 +59,7 @@
 	h1 {
 		margin-top: 5vh;
 		padding-left: 1%;
-		font-size: 10vh;
+		font-size: 15vh;
 		font-weight: 400;
 		margin-bottom: 0%;
 		color: #6c6d57;
