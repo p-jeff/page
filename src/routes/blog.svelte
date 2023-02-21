@@ -5,19 +5,15 @@
 {#if portrait}
 	<div class="text">
 		I write about ideas and my work process on my blog, here you find a list of recent posts.
-		<br /><button onclick="window.location.href='https://p-jeff.github.io/blog/';"
-			>Go to Blog →</button
-		>
+		<br /><button onclick="window.location.href='https://blog.lotze.xyz';">Go to Blog →</button>
 	</div>
 {:else}
 	<div class="container">
 		<div class="text">
 			I write about ideas and my work process on my blog, here you find a list of recent posts.
-			<br /><button onclick="window.location.href='https://p-jeff.github.io/blog/';"
-				>Go to Blog →</button
-			>
+			<br /><button onclick="window.location.href='https://blog.lotze.xyz';">Go to Blog →</button>
 		</div>
-		<iframe src="https://p-jeff.github.io/blog" title="blog" />
+		<iframe src="https://blog.lotze.xyz" title="blog" />
 	</div>
 {/if}
 
