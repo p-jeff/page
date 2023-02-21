@@ -1,5 +1,5 @@
 <script>
-	import { bind, element } from 'svelte/internal';
+	import { bind, element, onMount } from 'svelte/internal';
 	import Boaty from './boaty.svelte';
 	import Cn from './cn.svelte';
 	import EntryPortait from './entryPortait.svelte';
@@ -9,7 +9,7 @@
 		{
 			id: 1,
 			name: 'Cash from Crisis',
-			image: 'page/image/ss.jpg',
+			image: 'image/ss.jpg',
 			tag: '2021, Film',
 			color: '#732817',
 			three: true,
@@ -21,11 +21,11 @@
 				credit:
 					'Together with Valentina Sturn and Leo Mühlfeld @ Design Investigations, die Angewandte, Vienna, Austria 2021',
 				images: [
-					'page/image/contentImage/cfc1.jpg',
-					'page/image/contentImage/cfc2.jpg',
-					'page/image/contentImage/cfc3.jpg',
-					'page/image/contentImage/cfc4.jpg',
-					'page/image/contentImage/cfc5.jpg'
+					'image/contentImage/cfc1.jpg',
+					'image/contentImage/cfc2.jpg',
+					'image/contentImage/cfc3.jpg',
+					'image/contentImage/cfc4.jpg',
+					'image/contentImage/cfc5.jpg'
 				],
 				custom: true,
 				component: Sweeper
@@ -34,7 +34,7 @@
 		{
 			id: 2,
 			name: 'Am I Gaboniontum?',
-			image: 'page/image/amI.jpg',
+			image: 'image/amI.jpg',
 			tag: '2022, Installation',
 			color: '#3C3288',
 			three: true,
@@ -46,10 +46,10 @@
 				credit:
 					'Together with Sophie Hausmann, Emilie Dyrlow Madsen and Florian Sapp @ Design Investigations, die Angewandte, Vienna, Austria 2022, in Collaboration with the Natural History Museum Vienna',
 				images: [
-					'page/image/contentImage/gaboni1.jpg',
-					'page/image/contentImage/gaboni2.jpg',
-					'page/image/contentImage/gaboni3.jpg',
-					'page/image/contentImage/gaboni4.jpg'
+					'image/contentImage/gaboni1.jpg',
+					'image/contentImage/gaboni2.jpg',
+					'image/contentImage/gaboni3.jpg',
+					'image/contentImage/gaboni4.jpg'
 				],
 				custom: false
 			}
@@ -57,7 +57,7 @@
 		{
 			id: 3,
 			name: 'Collectively Narrated',
-			image: 'page/image/image.jpg',
+			image: 'image/image.jpg',
 			tag: '2022, Public Space',
 			color: '#D1CCC9',
 			three: false,
@@ -66,10 +66,10 @@
 				credit:
 					'Together with Miriam Daxl, Shannon McLachlan and Stephan Sinn @ Design Investigations, die Angewandte, Vienna, Austria 2022',
 				images: [
-					'page/image/contentImage/cn1.jpg',
-					'page/image/contentImage/cn2.jpg',
-					'page/image/contentImage/cn4.png',
-					'page/image/contentImage/cn5.jpg'
+					'image/contentImage/cn1.jpg',
+					'image/contentImage/cn2.jpg',
+					'image/contentImage/cn4.png',
+					'image/contentImage/cn5.jpg'
 				],
 				custom: false,
 				component: Cn
@@ -78,7 +78,7 @@
 		{
 			id: 4,
 			name: 'KI_tchen',
-			image: 'page/image/kitchen.jpg',
+			image: 'image/kitchen.jpg',
 			tag: '2021, Installation',
 			color: '#756F6A',
 			model: 'cow.obj',
@@ -90,11 +90,11 @@
 				credit:
 					'Together with Mia Tesic and Eszter Zwickl @ Design Investigations, die Angewandte, Vienna, Austria 2021',
 				images: [
-					'page/image/contentImage/ki1.jpg',
-					'page/image/contentImage/ki2.jpg',
-					'page/image/contentImage/ki3.jpg',
-					'page/image/contentImage/ki4.jpg',
-					'page/image/contentImage/ki5.jpg'
+					'image/contentImage/ki1.jpg',
+					'image/contentImage/ki2.jpg',
+					'image/contentImage/ki3.jpg',
+					'image/contentImage/ki4.jpg',
+					'image/contentImage/ki5.jpg'
 				],
 				custom: false
 			}
@@ -102,7 +102,7 @@
 		{
 			id: 5,
 			name: 'McBoaty',
-			image: 'page/image/boaty.jpg',
+			image: 'image/boaty.jpg',
 			tag: '2022, Creative Coding',
 			color: '#667689',
 			three: false,
@@ -112,7 +112,7 @@
 			content: {
 				text: 'A simple exloration into animating using javascript as well as working with various APIs, in this Case OpenWeather, Location and Time',
 				credit: 'Built in Summer 2022 using Svelte and Anime.js',
-				images: ['page/image/contentImage/boaty2.jpg', 'page/image/contentImage/boaty3.jpg'],
+				images: ['image/contentImage/boaty2.jpg', 'image/contentImage/boaty3.jpg'],
 				custom: false,
 				component: Boaty
 			}
@@ -125,25 +125,26 @@
 		isEntry = !isEntry;
 		clicked = content[entry.target.alt - 1];
 		title = clicked.name;
+		console.log(clicked);
 	}
 </script>
 
-<h1>{isEntry ? title : 'Johannes Felix Lotze'}</h1>
-<h2 on:click={handleClick}>{isEntry ? 'Back' : ''}</h2>
+<h1>{isEntry ? title : ''}</h1>
+<h2 on:click={handleClick}>{isEntry ? '←' : ''}</h2>
 
-{#if !isEntry}
-	<div>
-		{#each content as entry}
-			<img src={entry.image} alt={entry.id} on:click={handleClick} />
-		{/each}
-	</div>
-{:else}
+{#if isEntry}
 	<EntryPortait
 		img={clicked.image}
 		images={clicked.content.images}
 		text={clicked.content.text}
 		credit={clicked.content.credit}
 	/>
+{:else}
+	<div>
+		{#each content as entry}
+			<img src={entry.image} alt={entry.id} on:click={handleClick} />
+		{/each}
+	</div>
 {/if}
 
 <style>
@@ -153,6 +154,7 @@
 	h2 {
 		color: #6c6d57;
 		cursor: pointer;
+		margin-left: 3%;
 	}
 
 	img {
