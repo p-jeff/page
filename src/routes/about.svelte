@@ -76,7 +76,7 @@
 			<br />
 			<button onclick="window.location.href='https://vimeo.com/user128655280';"> Vimeo</button>
 			<br /> <br /> <br />
-			<a class="button" href="mailto:lotzejohannes@gmail.com"> Mail</a>
+			<a class="button" href="mailto:hey@lotze.xyz"> Mail me!</a>
 		</ul>
 	</div>
 {/if}
