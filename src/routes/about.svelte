@@ -73,6 +73,10 @@
 				Instagram</button
 			> <br />
 			<button onclick="window.location.href='https://github.com/p-jeff';"> GitHub</button>
+			<br />
+			<button onclick="window.location.href='https://vimeo.com/user128655280';"> Vimeo</button>
+			<br /> <br /> <br />
+			<a class="button" href="mailto:lotzejohannes@gmail.com"> Mail</a>
 		</ul>
 	</div>
 {/if}
@@ -130,7 +134,28 @@
 		max-height: 6vh;
 	}
 
+	a {
+		font-family: 'Josefin sans', serif;
+		margin-top: 5%;
+		padding: 3%;
+		font-size: 2vh;
+		border: 1px solid;
+		border-radius: 9999px;
+		min-width: 8rem;
+		text-align: center;
+		background-color: #fefeef;
+		color: #6c6d57;
+		max-width: fit-content;
+		max-height: 6vh;
+		text-decoration: none;
+	}
+
 	button:hover {
+		background-color: #6c6d57;
+		color: #fefeef;
+	}
+
+	a:hover {
 		background-color: #6c6d57;
 		color: #fefeef;
 	}
