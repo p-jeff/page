@@ -49,7 +49,7 @@
 		scrollbar-width: thin;
 		scrollbar-color: rgb(92, 92, 92) #fefeef;
 		font-weight: 400;
-		margin: 2%;
+		margin: 4%;
 		font-family: 'Lustria';
 	}
 	.gallery {
@@ -59,14 +59,15 @@
 		/* Firefox */
 		scrollbar-width: thin;
 		scrollbar-color: rgb(92, 92, 92) #fefeef;
+		text-align: center;
 	}
 	.gallery::-webkit-scrollbar {
 		display: none;
 	}
 	img {
-		max-height: 50vh;
+		max-height: 70%;
 		margin: 2%;
-		width: 95%;
+		max-width: 95%;
 	}
 
 	p {

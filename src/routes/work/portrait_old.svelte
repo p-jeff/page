@@ -7,6 +7,35 @@
 
 	let content = [
 		{
+			id: 6,
+			name: '#GRWM: Preparing for tomorrow',
+			image: 'image/grwm.jpg',
+			tag: '2023, Multimedia Installation',
+			color: '#667689',
+			three: false,
+			model: 'sun.obj',
+			material: '#F3AA3A',
+			zoom: [0.01, 0.01, 0.01],
+			content: {
+				text: "Narratives of certain futures have become a major marketing tool. Especially western capitalist future visions present themselves in a desireable way, while only representing a slim part of society. Negative visions are only presented as transitionary periods, since no decrease in living standart is acceptable. A given vision presents itself as the sole truth, relying on a belief in theoretical technological advancements to fill narrative gaps. There is no need for criticism since as soon a centain point of desire is reached, the capitalistic nature will solve itself and inequalities will become nonexistent, allowing humanity to continue at this point of desire in perpetuity.The Project uses the mundane concept of a morning routine and it's accompaniing products to give a glimpse into",
+				credit:
+					'Most of the thought process behind this Project can be found on my blog. Multimedia Installation,Project @ Design Investigations, University of Applied Arts Vienna, 2023',
+				images: [
+					'image/contentImage/grwm.jpg',
+					'image/contentImage/grwm1.jpg',
+					'image/contentImage/grwm2.jpg',
+					'image/contentImage/grwm3.jpg',
+					'image/contentImage/grwm4.jpg',
+					'image/contentImage/grwm5.jpg',
+					'image/contentImage/grwm6.jpg',
+					'image/contentImage/grwm7.jpg',
+					'image/contentImage/grwm8.jpg',
+					'image/contentImage/grwm9.jpg'
+				],
+				custom: false
+			}
+		},
+		{
 			id: 1,
 			name: 'Cash from Crisis',
 			image: 'image/ss.jpg',
