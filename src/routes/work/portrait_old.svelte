@@ -7,7 +7,7 @@
 
 	let content = [
 		{
-			id: 6,
+			id: 1,
 			name: '#GRWM: Preparing for tomorrow',
 			image: 'image/grwm.jpg',
 			tag: '2023, Multimedia Installation',
@@ -36,7 +36,7 @@
 			}
 		},
 		{
-			id: 1,
+			id: 2,
 			name: 'Cash from Crisis',
 			image: 'image/ss.jpg',
 			tag: '2021, Film',
@@ -61,7 +61,7 @@
 			}
 		},
 		{
-			id: 2,
+			id: 3,
 			name: 'Am I Gaboniontum?',
 			image: 'image/amI.jpg',
 			tag: '2022, Installation',
@@ -84,7 +84,7 @@
 			}
 		},
 		{
-			id: 3,
+			id: 4,
 			name: 'Collectively Narrated',
 			image: 'image/image.jpg',
 			tag: '2022, Public Space',
@@ -105,7 +105,7 @@
 			}
 		},
 		{
-			id: 4,
+			id: 5,
 			name: 'KI_tchen',
 			image: 'image/kitchen.jpg',
 			tag: '2021, Installation',
@@ -129,7 +129,7 @@
 			}
 		},
 		{
-			id: 5,
+			id: 6,
 			name: 'McBoaty',
 			image: 'image/boaty.jpg',
 			tag: '2022, Creative Coding',
