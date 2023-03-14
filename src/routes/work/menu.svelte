@@ -49,9 +49,9 @@
 
 	function handleScroll(event) {
 		if (event.deltaX > 0) {
-			changeSelection('left');
+			//changeSelection('left');
 		} else if (event.deltaX < 0) {
-			changeSelection('right');
+			//changeSelection('right');
 		}
 	}
 
